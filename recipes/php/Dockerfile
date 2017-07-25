@@ -14,10 +14,11 @@ ENV CHE_MYSQL_DB=che_db
 ENV CHE_MYSQL_USER=che
 
 # install php with a set of most widely used extensions
+RUN sudo add-apt-repository ppa:ondrej/php
 RUN sudo apt-get update && \
     sudo apt-get install -y \
     apache2 \
-    php \
+    php7.1 \
     php-mcrypt \
     php-curl \
     php-mysql \
